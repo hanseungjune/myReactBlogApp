@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Link, useNavigate  } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { app } from "firebaseApp";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
@@ -79,6 +79,7 @@ export default function SignupForm() {
           id="email"
           required
           onChange={onChange}
+          value={email}
         />
       </div>
       <div className="form__block">
@@ -89,6 +90,7 @@ export default function SignupForm() {
           id="password"
           required
           onChange={onChange}
+          value={password}
         />
       </div>
       <div className="form__block">
@@ -99,6 +101,7 @@ export default function SignupForm() {
           id="password_confirm"
           required
           onChange={onChange}
+          value={passwordConfirm}
         />
       </div>
       {error && error?.length > 0 && (

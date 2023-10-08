@@ -8,7 +8,6 @@ import Router from "./components/Router";
 import Loader from "components/Loader";
 
 function App() {
-  console.log(db);
   const auth = getAuth(app);
   const [init, setInit] = useState<boolean>(false);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(
